@@ -20,5 +20,10 @@ add_executable(main src/main.cpp)
 add_executable(move_main src/move_main.cpp)
 add_executable(CustumOperator src/CustumOperator.cpp)
 add_executable(inheritance src/inheritance.cpp)
+add_executable(staticFunctions src/staticFunctions.cpp)
+add_executable(digits_extinction src/digits_extinction.cpp)
+add_executable(pointer_dereferencing src/pointer_dereferencing.cpp)
+add_executable(pointer_overflow src/pointer_overflow.cpp)
+
 # tell the linker to bind these objects together
 target_link_libraries(main tools)

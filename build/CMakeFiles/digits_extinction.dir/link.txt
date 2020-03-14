@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/digits_extinction.dir/src/digits_extinction.cpp.o  -o ../bin/digits_extinction 

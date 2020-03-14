@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/staticFunctions.dir/src/staticFunctions.cpp.o  -o ../bin/staticFunctions 

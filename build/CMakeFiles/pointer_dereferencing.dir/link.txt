@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/pointer_dereferencing.dir/src/pointer_dereferencing.cpp.o  -o ../bin/pointer_dereferencing 

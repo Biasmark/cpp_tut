@@ -42,9 +42,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/pointer_dereferencing.dir/DependInfo.cmake"
+  "CMakeFiles/digits_extinction.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/tools.dir/DependInfo.cmake"
   "CMakeFiles/move_main.dir/DependInfo.cmake"
   "CMakeFiles/CustumOperator.dir/DependInfo.cmake"
   "CMakeFiles/inheritance.dir/DependInfo.cmake"
+  "CMakeFiles/staticFunctions.dir/DependInfo.cmake"
   )

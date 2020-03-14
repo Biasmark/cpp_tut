@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pointer_dereferencing
+
+# Build rule for target.
+pointer_dereferencing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pointer_dereferencing
+.PHONY : pointer_dereferencing
+
+# fast build rule for target.
+pointer_dereferencing/fast:
+	$(MAKE) -f CMakeFiles/pointer_dereferencing.dir/build.make CMakeFiles/pointer_dereferencing.dir/build
+.PHONY : pointer_dereferencing/fast
+
+#=============================================================================
+# Target rules for targets named digits_extinction
+
+# Build rule for target.
+digits_extinction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 digits_extinction
+.PHONY : digits_extinction
+
+# fast build rule for target.
+digits_extinction/fast:
+	$(MAKE) -f CMakeFiles/digits_extinction.dir/build.make CMakeFiles/digits_extinction.dir/build
+.PHONY : digits_extinction/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -175,6 +201,19 @@ inheritance/fast:
 	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/build
 .PHONY : inheritance/fast
 
+#=============================================================================
+# Target rules for targets named staticFunctions
+
+# Build rule for target.
+staticFunctions: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 staticFunctions
+.PHONY : staticFunctions
+
+# fast build rule for target.
+staticFunctions/fast:
+	$(MAKE) -f CMakeFiles/staticFunctions.dir/build.make CMakeFiles/staticFunctions.dir/build
+.PHONY : staticFunctions/fast
+
 src/CustumOperator.o: src/CustumOperator.cpp.o
 
 .PHONY : src/CustumOperator.o
@@ -228,6 +267,33 @@ src/Declaration_Definition.s: src/Declaration_Definition.cpp.s
 src/Declaration_Definition.cpp.s:
 	$(MAKE) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/src/Declaration_Definition.cpp.s
 .PHONY : src/Declaration_Definition.cpp.s
+
+src/digits_extinction.o: src/digits_extinction.cpp.o
+
+.PHONY : src/digits_extinction.o
+
+# target to build an object file
+src/digits_extinction.cpp.o:
+	$(MAKE) -f CMakeFiles/digits_extinction.dir/build.make CMakeFiles/digits_extinction.dir/src/digits_extinction.cpp.o
+.PHONY : src/digits_extinction.cpp.o
+
+src/digits_extinction.i: src/digits_extinction.cpp.i
+
+.PHONY : src/digits_extinction.i
+
+# target to preprocess a source file
+src/digits_extinction.cpp.i:
+	$(MAKE) -f CMakeFiles/digits_extinction.dir/build.make CMakeFiles/digits_extinction.dir/src/digits_extinction.cpp.i
+.PHONY : src/digits_extinction.cpp.i
+
+src/digits_extinction.s: src/digits_extinction.cpp.s
+
+.PHONY : src/digits_extinction.s
+
+# target to generate assembly for a file
+src/digits_extinction.cpp.s:
+	$(MAKE) -f CMakeFiles/digits_extinction.dir/build.make CMakeFiles/digits_extinction.dir/src/digits_extinction.cpp.s
+.PHONY : src/digits_extinction.cpp.s
 
 src/inheritance.o: src/inheritance.cpp.o
 
@@ -310,25 +376,85 @@ src/move_main.cpp.s:
 	$(MAKE) -f CMakeFiles/move_main.dir/build.make CMakeFiles/move_main.dir/src/move_main.cpp.s
 .PHONY : src/move_main.cpp.s
 
+src/pointer_dereferencing.o: src/pointer_dereferencing.cpp.o
+
+.PHONY : src/pointer_dereferencing.o
+
+# target to build an object file
+src/pointer_dereferencing.cpp.o:
+	$(MAKE) -f CMakeFiles/pointer_dereferencing.dir/build.make CMakeFiles/pointer_dereferencing.dir/src/pointer_dereferencing.cpp.o
+.PHONY : src/pointer_dereferencing.cpp.o
+
+src/pointer_dereferencing.i: src/pointer_dereferencing.cpp.i
+
+.PHONY : src/pointer_dereferencing.i
+
+# target to preprocess a source file
+src/pointer_dereferencing.cpp.i:
+	$(MAKE) -f CMakeFiles/pointer_dereferencing.dir/build.make CMakeFiles/pointer_dereferencing.dir/src/pointer_dereferencing.cpp.i
+.PHONY : src/pointer_dereferencing.cpp.i
+
+src/pointer_dereferencing.s: src/pointer_dereferencing.cpp.s
+
+.PHONY : src/pointer_dereferencing.s
+
+# target to generate assembly for a file
+src/pointer_dereferencing.cpp.s:
+	$(MAKE) -f CMakeFiles/pointer_dereferencing.dir/build.make CMakeFiles/pointer_dereferencing.dir/src/pointer_dereferencing.cpp.s
+.PHONY : src/pointer_dereferencing.cpp.s
+
+src/staticFunctions.o: src/staticFunctions.cpp.o
+
+.PHONY : src/staticFunctions.o
+
+# target to build an object file
+src/staticFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/staticFunctions.dir/build.make CMakeFiles/staticFunctions.dir/src/staticFunctions.cpp.o
+.PHONY : src/staticFunctions.cpp.o
+
+src/staticFunctions.i: src/staticFunctions.cpp.i
+
+.PHONY : src/staticFunctions.i
+
+# target to preprocess a source file
+src/staticFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/staticFunctions.dir/build.make CMakeFiles/staticFunctions.dir/src/staticFunctions.cpp.i
+.PHONY : src/staticFunctions.cpp.i
+
+src/staticFunctions.s: src/staticFunctions.cpp.s
+
+.PHONY : src/staticFunctions.s
+
+# target to generate assembly for a file
+src/staticFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/staticFunctions.dir/build.make CMakeFiles/staticFunctions.dir/src/staticFunctions.cpp.s
+.PHONY : src/staticFunctions.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... main"
+	@echo "... pointer_dereferencing"
 	@echo "... edit_cache"
+	@echo "... digits_extinction"
+	@echo "... main"
 	@echo "... tools"
 	@echo "... move_main"
 	@echo "... rebuild_cache"
 	@echo "... CustumOperator"
 	@echo "... inheritance"
+	@echo "... staticFunctions"
 	@echo "... src/CustumOperator.o"
 	@echo "... src/CustumOperator.i"
 	@echo "... src/CustumOperator.s"
 	@echo "... src/Declaration_Definition.o"
 	@echo "... src/Declaration_Definition.i"
 	@echo "... src/Declaration_Definition.s"
+	@echo "... src/digits_extinction.o"
+	@echo "... src/digits_extinction.i"
+	@echo "... src/digits_extinction.s"
 	@echo "... src/inheritance.o"
 	@echo "... src/inheritance.i"
 	@echo "... src/inheritance.s"
@@ -338,6 +464,12 @@ help:
 	@echo "... src/move_main.o"
 	@echo "... src/move_main.i"
 	@echo "... src/move_main.s"
+	@echo "... src/pointer_dereferencing.o"
+	@echo "... src/pointer_dereferencing.i"
+	@echo "... src/pointer_dereferencing.s"
+	@echo "... src/staticFunctions.o"
+	@echo "... src/staticFunctions.i"
+	@echo "... src/staticFunctions.s"
 .PHONY : help
 
 
