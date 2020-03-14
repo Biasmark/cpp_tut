@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hojin/cpp_tut/src/Declaration_Definition.h
+string
+-
+iostream
+-
+
+/home/hojin/cpp_tut/src/main.cpp
+iostream
+-
+Declaration_Definition.h
+/home/hojin/cpp_tut/src/Declaration_Definition.h
+
