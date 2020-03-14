@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/CustumOperator.dir/src/CustumOperator.cpp.o  -o ../bin/CustumOperator 

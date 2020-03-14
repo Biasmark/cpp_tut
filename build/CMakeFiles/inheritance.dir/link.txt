@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/inheritance.dir/src/inheritance.cpp.o  -o ../bin/inheritance 

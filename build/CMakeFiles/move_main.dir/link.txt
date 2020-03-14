@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra  -rdynamic CMakeFiles/move_main.dir/src/move_main.cpp.o  -o ../bin/move_main 

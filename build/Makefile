@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/hojin/cpp_tut/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named tools
 
 # Build rule for target.
@@ -124,17 +137,70 @@ tools/fast:
 .PHONY : tools/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named move_main
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+move_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_main
+.PHONY : move_main
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+move_main/fast:
+	$(MAKE) -f CMakeFiles/move_main.dir/build.make CMakeFiles/move_main.dir/build
+.PHONY : move_main/fast
+
+#=============================================================================
+# Target rules for targets named CustumOperator
+
+# Build rule for target.
+CustumOperator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CustumOperator
+.PHONY : CustumOperator
+
+# fast build rule for target.
+CustumOperator/fast:
+	$(MAKE) -f CMakeFiles/CustumOperator.dir/build.make CMakeFiles/CustumOperator.dir/build
+.PHONY : CustumOperator/fast
+
+#=============================================================================
+# Target rules for targets named inheritance
+
+# Build rule for target.
+inheritance: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 inheritance
+.PHONY : inheritance
+
+# fast build rule for target.
+inheritance/fast:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/build
+.PHONY : inheritance/fast
+
+src/CustumOperator.o: src/CustumOperator.cpp.o
+
+.PHONY : src/CustumOperator.o
+
+# target to build an object file
+src/CustumOperator.cpp.o:
+	$(MAKE) -f CMakeFiles/CustumOperator.dir/build.make CMakeFiles/CustumOperator.dir/src/CustumOperator.cpp.o
+.PHONY : src/CustumOperator.cpp.o
+
+src/CustumOperator.i: src/CustumOperator.cpp.i
+
+.PHONY : src/CustumOperator.i
+
+# target to preprocess a source file
+src/CustumOperator.cpp.i:
+	$(MAKE) -f CMakeFiles/CustumOperator.dir/build.make CMakeFiles/CustumOperator.dir/src/CustumOperator.cpp.i
+.PHONY : src/CustumOperator.cpp.i
+
+src/CustumOperator.s: src/CustumOperator.cpp.s
+
+.PHONY : src/CustumOperator.s
+
+# target to generate assembly for a file
+src/CustumOperator.cpp.s:
+	$(MAKE) -f CMakeFiles/CustumOperator.dir/build.make CMakeFiles/CustumOperator.dir/src/CustumOperator.cpp.s
+.PHONY : src/CustumOperator.cpp.s
 
 src/Declaration_Definition.o: src/Declaration_Definition.cpp.o
 
@@ -163,6 +229,33 @@ src/Declaration_Definition.cpp.s:
 	$(MAKE) -f CMakeFiles/tools.dir/build.make CMakeFiles/tools.dir/src/Declaration_Definition.cpp.s
 .PHONY : src/Declaration_Definition.cpp.s
 
+src/inheritance.o: src/inheritance.cpp.o
+
+.PHONY : src/inheritance.o
+
+# target to build an object file
+src/inheritance.cpp.o:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/src/inheritance.cpp.o
+.PHONY : src/inheritance.cpp.o
+
+src/inheritance.i: src/inheritance.cpp.i
+
+.PHONY : src/inheritance.i
+
+# target to preprocess a source file
+src/inheritance.cpp.i:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/src/inheritance.cpp.i
+.PHONY : src/inheritance.cpp.i
+
+src/inheritance.s: src/inheritance.cpp.s
+
+.PHONY : src/inheritance.s
+
+# target to generate assembly for a file
+src/inheritance.cpp.s:
+	$(MAKE) -f CMakeFiles/inheritance.dir/build.make CMakeFiles/inheritance.dir/src/inheritance.cpp.s
+.PHONY : src/inheritance.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -190,22 +283,61 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/move_main.o: src/move_main.cpp.o
+
+.PHONY : src/move_main.o
+
+# target to build an object file
+src/move_main.cpp.o:
+	$(MAKE) -f CMakeFiles/move_main.dir/build.make CMakeFiles/move_main.dir/src/move_main.cpp.o
+.PHONY : src/move_main.cpp.o
+
+src/move_main.i: src/move_main.cpp.i
+
+.PHONY : src/move_main.i
+
+# target to preprocess a source file
+src/move_main.cpp.i:
+	$(MAKE) -f CMakeFiles/move_main.dir/build.make CMakeFiles/move_main.dir/src/move_main.cpp.i
+.PHONY : src/move_main.cpp.i
+
+src/move_main.s: src/move_main.cpp.s
+
+.PHONY : src/move_main.s
+
+# target to generate assembly for a file
+src/move_main.cpp.s:
+	$(MAKE) -f CMakeFiles/move_main.dir/build.make CMakeFiles/move_main.dir/src/move_main.cpp.s
+.PHONY : src/move_main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... tools"
-	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... edit_cache"
+	@echo "... tools"
+	@echo "... move_main"
+	@echo "... rebuild_cache"
+	@echo "... CustumOperator"
+	@echo "... inheritance"
+	@echo "... src/CustumOperator.o"
+	@echo "... src/CustumOperator.i"
+	@echo "... src/CustumOperator.s"
 	@echo "... src/Declaration_Definition.o"
 	@echo "... src/Declaration_Definition.i"
 	@echo "... src/Declaration_Definition.s"
+	@echo "... src/inheritance.o"
+	@echo "... src/inheritance.i"
+	@echo "... src/inheritance.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/move_main.o"
+	@echo "... src/move_main.i"
+	@echo "... src/move_main.s"
 .PHONY : help
 
 

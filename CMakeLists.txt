@@ -17,5 +17,8 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 add_library(tools src/Declaration_Definition.cpp)
 #add executable file
 add_executable(main src/main.cpp)
+add_executable(move_main src/move_main.cpp)
+add_executable(CustumOperator src/CustumOperator.cpp)
+add_executable(inheritance src/inheritance.cpp)
 # tell the linker to bind these objects together
 target_link_libraries(main tools)
